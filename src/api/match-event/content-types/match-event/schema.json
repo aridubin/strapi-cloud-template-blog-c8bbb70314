@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "match_events",
+  "info": { "singularName": "match-event", "pluralName": "match-events", "displayName": "Match Event" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": ["Goal", "Assist"],
+      "required": true
+    },
+    "minute": { "type": "integer" },
+
+    "match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::match.match",
+      "inversedBy": "events",
+      "required": true
+    },
+
+    "player": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::player.player",
+      "required": true
+    }
+  }
+}
