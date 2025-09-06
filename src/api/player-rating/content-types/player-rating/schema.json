@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "player_ratings",
+  "info": { "singularName": "player-rating", "pluralName": "player-ratings", "displayName": "Player Rating" },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "rating": { "type": "integer", "min": 1, "max": 10, "required": true },
+    "match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::match.match",
+      "inversedBy": "player_ratings",
+      "required": true
+    },
+    "player": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::player.player",
+      "required": true
+    }
+  }
+}
