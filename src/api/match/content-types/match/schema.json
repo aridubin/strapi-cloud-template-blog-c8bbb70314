@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": { "singularName": "match", "pluralName": "matches", "displayName": "Match" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "date": { "type": "date", "required": true },
+    "opponent": { "type": "string", "required": true },
+    "home_away": { "type": "enumeration", "enum": ["Home", "Away"], "required": true },
+    "score_for": { "type": "integer" },
+    "score_against": { "type": "integer" },
+    "friendly": { "type": "boolean", "default": false },
+    "venue": { "type": "string" },
+    "report": { "type": "richtext" },
+
+    "league": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::league.league",
+      "required": true
+    },
+
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::match-event.match-event",
+      "mappedBy": "match"
+    },
+
+    "gallery_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gallery-item.gallery-item",
+      "mappedBy": "match"
+    },
+
+    "player_ratings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::player-rating.player-rating",
+      "mappedBy": "match"
+    }
+  }
+}
