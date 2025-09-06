@@ -1,0 +1,12 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": { "singularName": "site-setting", "pluralName": "site-settings", "displayName": "Site Settings" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "season": { "type": "string", "default": "2025/26" },
+    "hero_image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "primary_color": { "type": "string", "default": "#0B1F3A" },
+    "secondary_color": { "type": "string", "default": "#C62828" }
+  }
+}
