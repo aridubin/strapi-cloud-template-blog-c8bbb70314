@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trainings",
+  "info": { "singularName": "training", "pluralName": "trainings", "displayName": "Training" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "weekday": { "type": "integer", "required": true },            // 0=Sun .. 6=Sat
+    "start_time": { "type": "time", "required": true },
+    "end_time": { "type": "time", "required": true },
+    "location": { "type": "string", "required": true },            // e.g., LCFC Astro / LCFC Grass
+    "address": { "type": "string" },                               // full address for Maps links
+    "notes": { "type": "text" }
+  }
+}
