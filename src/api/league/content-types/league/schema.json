@@ -1,0 +1,10 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leagues",
+  "info": { "singularName": "league", "pluralName": "leagues", "displayName": "League" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "name":   { "type": "string", "required": true },
+    "season": { "type": "string", "default": "2025/26" }
+  }
+}
