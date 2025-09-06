@@ -3,8 +3,11 @@
   "collectionName": "leagues",
   "info": { "singularName": "league", "pluralName": "leagues", "displayName": "League" },
   "options": { "draftAndPublish": true },
+  "pluginOptions": {
+    "content-api": { "visible": true }
+  },
   "attributes": {
-    "name":   { "type": "string", "required": true },
+    "name": { "type": "string", "required": true },
     "season": { "type": "string", "default": "2025/26" }
   }
 }
