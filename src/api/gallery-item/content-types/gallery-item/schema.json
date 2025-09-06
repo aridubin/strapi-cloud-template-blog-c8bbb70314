@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallery_items",
+  "info": { "singularName": "gallery-item", "pluralName": "gallery-items", "displayName": "Gallery Item" },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "file": { "type": "media", "multiple": false, "allowedTypes": ["images", "videos"] },
+    "status": { "type": "enumeration", "enum": ["Pending", "Approved", "Rejected"], "default": "Pending" },
+    "uploaded_by": { "type": "string" },
+    "match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::match.match",
+      "inversedBy": "gallery_items"
+    }
+  }
+}
